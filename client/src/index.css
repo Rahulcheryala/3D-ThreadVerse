@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+
+@font-face {
+  font-family: "Highrise";
+  src: url("/fonts/highrise/HighriseFont-Bold-Demo.otf") format("opentype");
+  font-weight: bold; /* Specify weight (e.g., normal, bold) */
+  font-style: normal; /* Specify style (e.g., normal, italic) */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+.home-text {
+  @apply xl:text-[10rem] xl:leading-[8.5rem] lg:text-[9rem] lg:leading-[8rem] md:text-[8rem] md:leading-[7rem] text-[7rem] leading-[6rem] max-[400px]:text-[5rem] max-[400px]:leading-[4.5rem] font-black text-black transition-all duration-300;
+}
+
+.head-text {
+  @apply xl:text-[13rem] xl:leading-[11rem] lg:text-[12rem] lg:leading-[10rem] md:text-[9rem] md:leading-[7rem] text-[7rem] leading-[6rem] max-[400px]:text-[5rem] max-[400px]:leading-[4.5rem] font-black text-black transition-all duration-300;
+}
+
+.download-btn {
+  @apply w-14 h-14 flex justify-center items-center rounded-full glassmorphism cursor-pointer outline-none;
+}
+
+.editorTabs-container {
+  @apply glassmorphism w-16 border-2 rounded-lg flex flex-col justify-center items-center ml-1 py-3 gap-3;
+}
+
+.filterTabs-container {
+  @apply flex justify-center items-center gap-4;
+}
+
+.modelTabs-container {
+  @apply glassmorphism w-16 border-2 rounded-lg flex flex-col justify-center items-center mr-1 py-3 gap-3;
+}
+
+.aipicker-container {
+  @apply absolute left-full ml-3 glassmorphism p-3 w-[195px] h-[220px] rounded-md flex flex-col gap-4;
+}
+
+.aipicker-textarea {
+  @apply w-full bg-transparent text-sm border border-gray-300 p-2 outline-none flex-1;
+}
+
+.filePicker-container {
+  @apply absolute left-full top-0 ml-3 glassmorphism p-3 w-[195px] h-[220px] flex flex-col rounded-md;
+}
+
+.filePicker-label {
+  @apply border-2 border-gray-500 py-1.5 px-2 rounded-md shadow-sm shadow-gray-400 text-xs text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 cursor-pointer w-fit;
+}
+
+.tab-btn {
+  @apply w-14 h-14 flex justify-center items-center cursor-pointer select-none;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+input[type="file"] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+.sketch-picker {
+  width: 170px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.sketch-picker > div:nth-child(3) {
+  display: none !important;
+}
